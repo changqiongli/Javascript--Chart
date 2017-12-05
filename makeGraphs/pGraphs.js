@@ -56,7 +56,7 @@ function drawChart(result) {
    //threshold line array;	 
     var thr=[];	
     for(var i=0;i<=unit;i++){
-	    thr.push(threshold);
+	    thr.push(thrs1);
         hAxisNo.push(unit-i); 		
 	}
 	//Y Axis ticks array; 
@@ -195,8 +195,8 @@ var factor =parseInt(getParameter("factor", "10000"));
 var file = getParameter("file", "data3.txt"); 
 var unit =parseInt(getParameter("unit", "96")); 
 var label =parseInt(getParameter("label", "4"));
-var threshold = parseFloat(getParameter("threshold", "0.0025"));
-var thrs1 = threshold;
+var threshold = getParameter("threshold", "0.0025");
+var thrs1 = parseFloat(threshold);
 var thrs2 = (thrs1 * 3) / 4;
 // Get data from the file,then draw graph
 //create endsWith for IE
